@@ -15,10 +15,14 @@ const Home = ({ handleTheme }: Props) => {
       <Switch
         onChange={handleTheme}
         offColor="#484e48"
-        onColor="#37f507"
+        onColor="#000"
         checked={name === 'Light'}
+        height={20}
+        width={40}
+        uncheckedIcon={false}
+        checkedIcon={false}
       />
-      <button onClick={handleTheme}>Trocar</button>
+      {name === 'Light' ? <p>Light</p> : <p>Dark</p>}
     </>
   );
 };
